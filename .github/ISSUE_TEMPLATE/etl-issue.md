@@ -8,6 +8,7 @@ assignees: ''
 ---
 
 **Description about issue**
+A clear and concise description of what the issue is.
 
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
