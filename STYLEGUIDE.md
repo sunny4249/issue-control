@@ -10,11 +10,27 @@ So, didn't edit it, simply just moved the necessary parts.
 
 <!-- TOC depthFrom:1 depthTo:3 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [1.1 import](#imports)
-- [1.1 Global variables](#Globalvar)
+- [1. Python Language Rules](#LanguageRule)
+    - [1.1 import](#imports)
+    - [1.2 Exceptions](#Exceptions)
+    - [1.3 Global variables](#Globalvar)
+    - [1.4 Default Argument Values](#DefaultArgs)
+    - [1.5 True/False Evaluations](#TrueFalse)
+
+
+- [2 Python Style Rules](#Style)
+    - [2.1 Parentheses](#Parentheses)
+    - [2.2 Indentation](#Indentation)
+    - [2.3 Whitespace](#Whitespace)
+    - [2.4 Comments and Docstrings](#CommentsDocstring)
+    - [2.5 Strings](#Strings)
+    - [2.6 Imports formatting](#ImportFormatting)
+    - [2.7 Naming](#Naming)
+    - [2.8 Function length](#FunctionLength)
+
 <!-- /TOC -->
 
-##  1. Python Language Rules
+##  <a name="LanguageRule"></a> 1. Python Language Rules
 
 ### <a name="imports"></a>1.1 imports
 
@@ -61,7 +77,7 @@ NO:
 Do not use relative names in imports. Even if the module is in the same package, use the full package name. This helps prevent unintentionally importing a package twice.
 
 
-### 1.2 Exceptions
+### <a name="Exceptions"></a> 1.2 Exceptions
 
 Exceptions are allowed but must be used carefully.
 
@@ -187,7 +203,7 @@ module-level functions. See Naming below.
 
 
 
-### 1.4 Default Argument Values
+### <a name="DefaultArgs"></a> 1.4 Default Argument Values
 
 Okay in most cases.
 
@@ -242,7 +258,7 @@ No:  def foo(a, b: Mapping = {}):  # Could still get passed to unchecked code
 
 
 
-### 1.5 True/False Evaluations
+### <a name="TrueFalse"></a> 1.5 True/False Evaluations
 
 Use the “implicit” false if at all possible.
 
@@ -312,10 +328,10 @@ Note that Numpy arrays may raise an exception in an implicit boolean context.
 Prefer the .size attribute when testing emptiness of a np.array (e.g. if not users.size).
 
 
-## 2 Python Style Rules
+## <a name="Style"></a> 2 Python Style Rules
 
 
-### 2.1 Parentheses
+### <a name="Parentheses"></a> 2.1 Parentheses
 Use parentheses sparingly.
 
 It is fine, though not required, to use parentheses around tuples. Do not use them in return statements or conditional statements unless using parentheses for implied line continuation or to indicate a tuple.
@@ -347,7 +363,7 @@ No:  if (x):
      
      
 
-### 2.2 Indentation
+### <a name="Indentation"></a> 2.2 Indentation
 Indent your code blocks with 4 spaces.
 
 Never use tabs or mix tabs and spaces. In cases of implied line continuation, you should align wrapped elements either vertically, as per the examples in the line length section; or using a hanging indent of 4 spaces, in which case there should be nothing after the open parenthesis or bracket on the first line.
@@ -402,7 +418,7 @@ No:    # Stuff on first line forbidden
 ```
 
        
-### 2.3 Whitespace
+### <a name="Whitespace"></a> 2.3 Whitespace
 Follow standard typographic rules for the use of spaces around punctuation.
 
 No whitespace inside parentheses, brackets or braces.
@@ -497,8 +513,7 @@ No:
 
 ```
   
-   
-### 2.4 Comments and Docstrings
+### <a name="CommentsDocstring"></a> 2.4 Comments and Docstrings
 Be sure to use the right style for module, function, method docstrings and inline comments.
 
 #### 2.4.1 Docstrings
@@ -720,15 +735,14 @@ On the other hand, never describe the code. Assume the person reading the code k
 # the next element is i+1
 ```
 
-
-### 2.5 Strings
+   
+### <a name="Strings"></a> 2.5 Strings
 
 - Do not use % or the format method for pure concatenation.
 - Avoid using the + and += operators to accumulate a string within a loop,  Instead, add each substring to a list and ''.join
 - Prefer """ for multi-line strings rather than '''
 
-
-### 2.6 Imports formatting
+### <a name="ImportFormatting"></a> 2.6 Imports formatting
 Imports should be on separate lines; there are exceptions for typing imports.
 
 E.g.:
@@ -806,7 +820,7 @@ from otherproject.ai import soul
 ```
 
 
-### 2.7 Naming
+### <a name="Naming"></a> 2.7 Naming
 module_name, package_name, ClassName, method_name, ExceptionName, function_name, 
 GLOBAL_CONSTANT_NAME, global_var_name, instance_var_name, function_parameter_name, 
 local_var_name.
@@ -872,8 +886,7 @@ If you want an executable to be accessible without the extension, use a symbolic
 link or a simple bash wrapper containing exec "$0.py" "$@".
 
 
-
-3.18 Function length
+#### <a name="FunctionLength"></a> 2.8 Function length
 Prefer small and focused functions.
 
 We recognize that long functions are sometimes appropriate, so no hard limit is 
