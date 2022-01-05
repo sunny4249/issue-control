@@ -11,7 +11,7 @@ So, didn't edit it, simply just moved the necessary parts.
 <!-- TOC depthFrom:1 depthTo:3 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [1.1 import](#imports)
-- [1.1 Global variables](#Global variables)
+- [1.1 Global variables](#Globalvar)
 <!-- /TOC -->
 
 ##  1. Python Language Rules
@@ -157,7 +157,7 @@ the try block. This is often useful for cleanup, i.e., closing a file.
 
 
 
-### <a name="Global variables"></a> 1.3 Global variables
+### <a name="Globalvar"></a> 1.3 Global variables
 Avoid global variables.
 
 #### 1.3.1 Definition
