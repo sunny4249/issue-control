@@ -8,6 +8,8 @@ So, all contributors and maintainers of this project are subject to this guide.
 This guides is from [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html).
 So, didn't edit it, simply just moved the necessary parts.
 
+# Table
+
 <!-- TOC depthFrom:1 depthTo:3 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [1. Python Language Rules](#LanguageRule)
