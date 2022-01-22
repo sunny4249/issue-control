@@ -1,0 +1,24 @@
+{
+  "query": {
+    "bool": {
+      "should": [
+        {% for mth in mths -%}
+          {% include 'match.json' -%},
+        {% endfor %}
+      ],
+      "filter": [
+        {% for field, terms in filters.items() %}
+          {% include 'terms.json' -%}
+        {% endfor %}
+      ],
+      "minimum_should_match": {{minimum_should_match}}
+    }
+  },
+  "sort": [
+    {% for sort in sorts %}
+      {% for field, order in sort.items() %}
+          {% include 'sort.json' -%}
+      {% endfor %}
+    {% endfor %}
+  ]
+  }
